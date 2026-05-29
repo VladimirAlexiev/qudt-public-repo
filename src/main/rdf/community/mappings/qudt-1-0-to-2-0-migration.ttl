@@ -1,0 +1,43 @@
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# QUDT 1.0 to 2.0 Migration Mappings
+#
+# This file contains dct:isReplacedBy mappings from QUDT 1.0 naming conventions
+# to QUDT 2.0 naming conventions. Deprecated QUDT 1.0 units should be marked with
+# owl:deprecated and linked to their replacements using dct:isReplacedBy.
+#
+# Reference: https://github.com/qudt/qudt-public-repo/issues/1106
+#
+# Example:
+# unit:BecquerelPerGram 
+#   owl:deprecated true ;
+#   dct:isReplacedBy unit:BQ-PER-GM ;
+#   skos:hiddenLabel "BecquerelPerGram" .
+
+# Template for QUDT 1.0 deprecated units:
+#
+# unit:[OldName]
+#   a qudt:Unit ;
+#   owl:deprecated true ;
+#   dct:isReplacedBy unit:[NewName] ;
+#   rdfs:seeAlso unit:[NewName] ;
+#   skos:hiddenLabel "[OldName]" ;
+#   skos:note "Deprecated QUDT 1.0 naming convention. Use unit:[NewName] instead." .
+
+# Migration entries below:
+# Please add specific QUDT 1.0 units with their QUDT 2.0 replacements following the template above.
+
+# Example entries (to be populated with actual QUDT 1.0 units):
+#
+# unit:BecquerelPerGram
+#   a qudt:Unit ;
+#   owl:deprecated true ;
+#   dct:isReplacedBy unit:BQ-PER-GM ;
+#   rdfs:seeAlso unit:BQ-PER-GM ;
+#   skos:hiddenLabel "BecquerelPerGram" ;
+#   skos:note "Deprecated QUDT 1.0 naming convention. Use unit:BQ-PER-GM instead." .
